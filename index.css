@@ -1,0 +1,312 @@
+:root {
+    --color1: #191919;
+    --color2: #FAB162;
+    --color3: #FAB162;
+    --wiper1: #C3C3E6;
+    --wiper2: #D1C8E1;
+    --wiper3: #BBA0CA;
+    --wiper4: #B370B0;
+}
+
+body {
+    background-color: var(--color1);
+    max-width: 100%;
+    overflow-x: hidden;
+    max-height: 100%;
+    overflow-y: hidden;
+}
+
+h1 {
+    color: var(--color2);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+p {
+    color: var(--color3);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.mainSection {
+    /*border: red dotted 1px;*/
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    position: absolute;
+    width: 35%;
+    height: 30%;
+    top: 35%;
+    right: 10%;
+}
+
+.mainSection p {
+    opacity: 0;
+    font-size: 1.8em;
+    animation: 0.75s ease-in 1.5s 1 slowAppear forwards;
+}
+
+.mainSection h1 {
+    animation: 1.5s cubic-bezier(0.65, 0.09, 0.37, 1.65) 0s 1 slideInLeft;
+    font-size: 5.5em;
+}
+
+.mainText {
+    line-height: 0.7em;
+    text-align: right;
+}
+
+.mainText #hi {
+    text-align: left;
+    font-size: 2.5em;
+}
+
+.bodySection {
+    border: red dotted 1px;
+}
+
+.leftImage {
+    /* border: red dotted 1px; */
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    width: 35%;
+    height: 80%;
+    position: absolute;
+    top: 22.5%;
+    left: 12%;
+    opacity: 0;
+    animation: 1s ease-out 3s 1 slideInBelow forwards;
+}
+
+.leftImage img {
+    width: 100%;
+    height: auto;
+    animation: 3s linear 0s infinite bubbleEffect alternate-reverse;
+}
+
+.button-62 {
+  background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  opacity: 0;
+  animation: 0.75s ease-in 2.5s 1 slowAppear forwards;
+  z-index: 1;
+}
+
+.button-62:not([disabled]):focus {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.button-62:not([disabled]):hover {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.aboutMe {
+    /* outline: red dotted 1px; */
+    position: absolute;
+    height: 100%;
+    width: 90%;
+    left: 5%;
+}
+
+.aboutMe h1 {
+    font-size: 5em;
+}
+
+.aboutMeTitle {
+    opacity: 0;
+}
+
+.aboutMeBody {
+    /* border: red dotted 1px; */
+    font-size: 2em;
+}
+
+.aboutMeBody p {
+    opacity: 0;
+}
+
+.aboutMeImg {
+    /* border: red dotted 1px; */
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    position: absolute;
+
+    left: 2%;
+
+    width: 25%;
+    display: none;
+}
+
+.aboutMeImg img {
+    width: 100%;
+    height: auto;
+}
+
+.wipers {
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    height: 110%;
+    width: 110%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.alignStart {
+    align-items: start;
+}
+
+.alignEnd {
+    align-items: end;
+}
+
+.wiper1 {
+    background-color: var(--wiper1);
+}
+
+.wiper2 {
+    background-color: var(--wiper2);
+}
+
+.wiper3 {
+    background-color: var(--wiper3);
+}
+
+.wiper4 {
+    background-color: var(--wiper4);
+}
+
+.wiper {
+    /* outline: red dotted 1px; */
+    height: 12.5%;
+    width: 0%;
+    z-index: 3;
+
+    /* animation: 1s ease-in 4s 1 wiperOpen forwards, 1s ease-in 5s 1 wiperClose forwards; */
+
+}
+
+.wiperOpen {
+    animation: 0.5s ease-in 0s 1 wiperOpen forwards;
+}
+
+.wiperClose {
+    animation: 0.5s ease-out 0s 1 wiperClose forwards;
+}
+
+.slowAppearClass {
+    animation: 0.75s ease-in 0s 1 slowAppear forwards;
+}
+
+.slideRightClass {
+    animation: 0.75s ease-out 0s 1 slideInRight forwards;
+}
+
+.slideBelowClass {
+    animation: 0.75s ease-out 0s 1 slideInBelow forwards;
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(75%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInBelow {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slowAppear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bubbleEffect {
+    0% {
+        width: 100%;
+        height: auto;
+    }
+
+    20% {
+        width: 100%;
+        height: auto;
+    }
+
+    80% {
+        width: 104%;
+        height: auto;
+    }
+
+    100% {
+        width: 104%;
+        height: auto;
+    }
+}
+
+@keyframes wiperOpen {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes wiperClose {
+    0% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0%;
+    }
+}
