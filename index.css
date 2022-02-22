@@ -84,6 +84,20 @@ p {
     animation: 3s linear 0s infinite bubbleEffect alternate-reverse;
 }
 
+.learnBtn {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    /* border: red dotted 1px; */
+    width: 100%;
+    height: 100%
+}
+
+.learnBtn button {
+    opacity: 0;
+    animation: 0.75s ease-in 2.5s 1 slowAppear forwards;
+}
+
 .button-62 {
   background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
   border: 0;
@@ -104,8 +118,6 @@ p {
   -webkit-user-select: none;
   touch-action: manipulation;
   white-space: nowrap;
-  opacity: 0;
-  animation: 0.75s ease-in 2.5s 1 slowAppear forwards;
   z-index: 1;
 }
 
@@ -158,6 +170,26 @@ p {
 .aboutMeImg img {
     width: 100%;
     height: auto;
+}
+
+.aboutMeButtons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: red dotted 1px; */
+    position: absolute;
+    width: 50%;
+    right: 10%;
+    bottom: 30%;
+}
+
+.aboutMeButtons button {
+    opacity: 0;
+    font-size: 1.5em;
+}
+
+.projectsTitle {
+    opacity: 0;
 }
 
 .wipers {
@@ -217,8 +249,16 @@ p {
     animation: 0.75s ease-in 0s 1 slowAppear forwards;
 }
 
+.fastAppearClass {
+    animation: 0.5s ease-in 0s 1 fastAppear forwards;
+}
+
 .slideRightClass {
     animation: 0.75s ease-out 0s 1 slideInRight forwards;
+}
+
+.slideLeftClass {
+    animation: 1.5s cubic-bezier(0.65, 0.09, 0.37, 1.65) 0s 1 slideInLeft forwards;
 }
 
 .slideBelowClass {
@@ -288,6 +328,18 @@ p {
     100% {
         width: 104%;
         height: auto;
+    }
+}
+
+@keyframes fastAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(-20%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
